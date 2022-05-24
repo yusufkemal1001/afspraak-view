@@ -5,11 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="/dist/output.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
     <title>Homepage</title>
 </head>
 <body>
- <div class="text-l">
+ <div class="text-red-600">
      WASSSUUUUp
  </div>
 </body>
