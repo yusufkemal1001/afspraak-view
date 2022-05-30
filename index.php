@@ -19,7 +19,7 @@
             <div id="currentTime" class="text-3xl pl-4 max-w-xs">
                 <script>
                     var today = new Date();
-                    var time = today.getHours() + ":" + today.getMinutes();
+                    var time = today.getHours() + ":" + (('0'+today.getMinutes()).slice(-2));
                     document.getElementById("currentTime").innerHTML = time;
                 </script>
             </div>
