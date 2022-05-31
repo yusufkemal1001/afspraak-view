@@ -49,9 +49,7 @@ if (isset($_SESSION["id"])){
                 Afspraken
             </div>
             <div class="w-full overflow-scroll max-h-screen ">
-                <div class="w-3/4 rounded-md max-h-80 bg-white h-40 m-auto p-5 mb-5">
-                    <?php require 'show.groups.php' ?>
-                </div>
+                <?php include 'show.groups.php'?>
             </div>
         </div>
     </div>
