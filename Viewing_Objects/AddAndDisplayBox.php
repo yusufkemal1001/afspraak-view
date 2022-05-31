@@ -1,7 +1,7 @@
 <?php
-include('../classes/TeamClass.php');
-include('../classes/AfspraakClass.php');
-include('../classes/AddDisplayLogic.php');
+require_once('../classes/TeamClass.php');
+require_once('../classes/AfspraakClass.php');
+require_once('../classes/AddDisplayLogic.php');
 ?>
 <html>
   <head>
@@ -16,7 +16,7 @@ include('../classes/AddDisplayLogic.php');
     
     <h1> 
         <?php
-        echo $Title
+         echo "Team";
         ?>
    </h1>
 
@@ -27,16 +27,17 @@ include('../classes/AddDisplayLogic.php');
 
     <div class="itemBox"> <!-- the input -->
      <?php
-     
-     $item = new Team();
+     $logic = new logic();
+     $sqlCaller = new sqlCaller();
 
-     
-     foreach($itemArray as $item){
-         echo '
-         <div id="itemDiv" style="display: block"
-
-         ';
+     if()
+     for ($i = 0; $i < $logic->displayAmount; $i++) {
+      echo '
+      
+      ';
      }
+     
+     
 
      ?>
     </div> 

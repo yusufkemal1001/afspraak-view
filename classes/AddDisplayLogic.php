@@ -1,13 +1,13 @@
 <?php
 
-class Info {
+class logic {
 
     public string $Title;
 
     public $DatabaseCaller;
 
     private $itemArray;
-    private $displayAmount = 5;
+    public int $displayAmount = 5;
 
     
 
