@@ -1,0 +1,25 @@
+Host: localhost   Database: afspraak_db    Generation Time: 2022-05-31 13:32:16 +0000
+
+Table events
+
+1,"review","2022-05-31 15:10:10",1,1
+
+
+Table frequency
+
+1,"everyday"
+2,"weekly"
+3,"monthly"
+
+
+Table groups
+
+1,"fuck",3,"seito2a","group-images/test.png"
+2,"you",6,"seito238476","group-images/test.png"
+3,"too",2,"seito2a","group-images/test.png"
+
+
+Table users
+
+2,"Frans De Boer","fdeboer@rocfriesepoort.nl","fransDB","fransDB1."
+3,"Richard Kingma","rkingma@rocfriesepoort.nl","richardK","richardK1."
