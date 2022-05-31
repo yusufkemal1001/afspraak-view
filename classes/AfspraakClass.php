@@ -1,7 +1,7 @@
 
 <?php 
 
-class Team {
+class Afspraak{
 
     public $name;
 
