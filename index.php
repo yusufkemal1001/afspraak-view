@@ -15,37 +15,35 @@
 </head>
 <body>
     <div class="w-full overflow-x-hidden ">
-        <div class="w-full flex border-b-1 p-5 border-b-4 border-black">
-            <div id="currentTime" class="text-3xl pl-4 max-w-xs">
-                <script>
-                    var today = new Date();
-                    var time = today.getHours() + ":" + (('0'+today.getMinutes()).slice(-2));
-                    document.getElementById("currentTime").innerHTML = time;
-                </script>
-            </div>
 
-            <div class="text-4xl text-center m-auto pr-16">
+
+        <div class="mainContainer flex m-auto ">
+            <div class="w-2/6 border-r-2 border-l-2 border-b-2 border-black">
+                <div id="currentTime" class="text-3xl text-center p-5 border-b border-black  h-20">
+                    <script>
+                        var today = new Date();
+                        var time = (('0'+today.getHours()).slice(-2)) + ":" + (('0'+today.getMinutes()).slice(-2));
+                        document.getElementById("currentTime").innerHTML = time;
+                    </script>
+                </div>
                 <div>
-                Software Developer Rooster
+                    <div class="text-4xl text-center mt-5 mb-5">Bezig</div>
+
+                    <div class="w-3/4 rounded-md max-h-80 h-40 bg-red-100 m-auto p-5 mb-5">sup</div>
                 </div>
             </div>
-            <div class="text-3xl pl-4 max-w-xs">
-                <a href="login.php"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
-
-            </div>
-        </div>
-        <div class="mainContainer flex m-auto ">
-
-            <div class="w-2/6 border-r-2 border-l-2 border-b-2 border-black">
-                <div class="w-full">
-                    <div class="text-4xl text-center mb-5">Bezig</div>
-
-                    <div class="w-3/4 max-h-80 h-40 bg-red-100 m-auto p-5 mb-5">sup</div>
+            <div class="w-2/6 border-r-2  border-b-2 border-black">
+                <div>
+                    <div class="text-2xl text-center p-5 mb-5 h-20 border-b border-black  ">Volgende afspraken</div>
+                    <div class="w-3/4 rounded-md max-h-80 h-40 bg-red-100 m-auto p-5 mb-5">sup</div>
                 </div>
             </div>
             <div class="w-4/6">
-                <div class="w-full border-r-2 border-black border-b-2 ">
-                    <div class="text-4xl text-center mb-5">Week Rooster</div>
+                <div class="w-full border-black border-b h-20 ">
+                    <div class="text-3xl pr-4 max-w-xs float-right pr-2">
+                        <a href="login.php"><i class="fa fa-sign-in hover:text-gray-600" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="text-4xl text-center p-5 ">Week Rooster</div>
                 </div>
             </div>
         </div>
