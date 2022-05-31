@@ -1,7 +1,7 @@
 <?php
-include('./classes/TeamClass.php');
-include('./classes/AfspraakClass.php');
-include('./classes/AddDisplayLogic.php');
+include('../classes/TeamClass.php');
+include('../classes/AfspraakClass.php');
+include('../classes/AddDisplayLogic.php');
 ?>
 <html>
   <head>
