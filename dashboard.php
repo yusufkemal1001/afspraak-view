@@ -32,28 +32,15 @@ if (isset($_SESSION["id"])){
 
             <div class="text-4xl text-center  p-5 ">
                 Groepen
+                <a href="create.group.php"><i class="fa-solid text-2xl fa-plus float-right"></i></a>
             </div>
 
             <div class="w-full overflow-scroll max-h-screen ">
-                <?php include 'show.groups.php'?>
-<!--                <div class="w-3/4 rounded-md max-h-80 bg-white h-40 m-auto p-5 mb-5">-->
-<!--                    <div class="flex">-->
-<!--                        <div class="w-2/5">-->
-<!--                            <img src="--><?php //echo $row['image'];?><!--" alt="">-->
-<!--                        </div>-->
-<!--                        <div class="w-3/5">-->
-<!--                            <div class="text-center text-2xl ">-->
-<!--                                --><?php //echo $row['name'];?>
-<!--                            </div>-->
-<!--                            <div class="text-m">-->
-<!--                                Klas : --><?php //echo $row['class'] ?>
-<!--                            </div>-->
-<!--                            <div class="text-m">-->
-<!--                                Aantal leden : --><?php //echo $row['members'] ?>
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
+
+                <?php include 'show.groups.php';
+                if (isset($_POST))
+                ?>
+
             </div>
         </div>
     </div>
@@ -61,8 +48,10 @@ if (isset($_SESSION["id"])){
         <div class="bg-gray-300 rounded-md">
             <div class="text-4xl text-center  p-5 ">
                 Afspraken
+                <a href="create.event.php"><i class="fa-solid text-2xl fa-plus float-right"></i></a>
             </div>
             <div class="w-full overflow-scroll max-h-screen ">
+
                 <?php include 'show.events.php'?>
             </div>
         </div>

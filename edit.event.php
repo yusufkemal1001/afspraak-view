@@ -92,19 +92,6 @@ if(isset($_GET['id'])){
 <!--                                                <b><label>Herhaling</label></b>&nbsp;&nbsp;-->
 <!--                                                <input class="bg-gray-300 rounded-md pl-2"  type="text" name="frequency"  /><br>-->
 <!--                                            </div>-->
-                                            <div class="flex p-2 items-center">
-                                                <b><label>Herhaling: </label></b>&nbsp;&nbsp;
-                                                <input type="radio" id="Dagelijks" name="frequency" value="Dagelijks">
-                                                <label for="Dagelijks">Dagelijks</label>&nbsp;&nbsp;
-                                                <input type="radio" id="wekelijks" name="frequency" value="Wekelijks">
-                                                <label for="Wekelijks">Wekelijks</label>&nbsp;&nbsp;
-                                                <input type="radio" id="Maandelijks" name="frequency" value="Maandelijks">
-                                                <label for="Maandelijks">Maandelijks</label>&nbsp;&nbsp;
-                                            </div>
-                                            <div class="flex p-2">
-                                                <b><label>Wordt herhaald tot</label></b>&nbsp;&nbsp;
-                                                <input type="date" id="endDate"  class="rounded-md bg-gray-300 pl-2" name="endDate"  /><br>
-                                            </div>
                                             <div class="w-full p-2 flex justify-between">
                                                 <input type="submit" value="Verstuur"  name="submit" class="bg-green-400 p-2 text-white rounded-md" >
                                                 <a href="delete.event.php?id=<?php echo $row['event_id'];?>" class="bg-red-400 p-2 text-white rounded-md float-right">Deze Afspraak Verwijderen</a>

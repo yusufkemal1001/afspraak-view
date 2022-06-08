@@ -17,7 +17,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {?>
-<!--        echo "id: " . $row["name"]. " - Name: " . $row["name"]. " " . $row["name"]. "<br>";-->
+
 
 <div class="w-3/4 rounded-md  bg-white max-h-80 m-auto p-5 mb-5">
     <a href="edit.group.php?id=<?php echo $row['group_id'];?>"><i class="fa-solid text-l fa-pen-to-square p-2"></i></a>
@@ -47,7 +47,11 @@ if ($result->num_rows > 0) {
     }
 
 } else {
-    echo "0 results";
+    ?>
+    <div class="bg-red-400 w-3/4 m-auto p-2 rounded-md mb-5">
+        <div class="text-center text-white text-2xl"><?php echo "Er zijn geen groepen";?></div>
+    </div>
+    <?php
 }
 $conn->close();
 ?>

@@ -11,12 +11,12 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT events.name, frequency.type as frequency,events.end_time,frequency.end_date, teams.name as TeamName, events.start_time, cast(`start_time` as time) as time	 
+$sql = "SELECT events.name, frequency.type as frequency,frequency.end_date, teams.name as TeamName, events.start_time,events.end_time, cast(`start_time` as time) as time	 
 FROM teams
 INNER JOIN events
 ON  teams.group_id=events.group_id
 INNER JOIN frequency 
-ON events.frequency_id=frequency.frequency_id WHERE YEARWEEK(start_time)=YEARWEEK(now()) AND weekday(start_time)=0  ORDER BY start_time asc;";
+ON events.frequency_id=frequency.frequency_id WHERE YEARWEEK(start_time)=YEARWEEK(now()) AND weekday(start_time)=4  ORDER BY start_time asc;";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -44,7 +44,7 @@ if ($result->num_rows > 0) {
     }
 
 } else { ?>
-<div class="text-red-500 m-5 text-center"><b><?php echo "*Geen Afspraken*";?></b></div><?php
+    <div class="text-red-500 m-5 text-center"><b><?php echo "*Geen Afspraken*";?></b></div><?php
 }
 $conn->close();
 ?>

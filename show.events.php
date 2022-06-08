@@ -11,14 +11,18 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT events.name, frequency.type, teams.name as TeamName, teams.image, events.start_time ,events.event_id,events.end_time,frequency.end_date
+$sql = "SELECT events.name, frequency.type, teams.name as TeamName, DATE_FORMAT(start_time,'%a') as dayOfWeek ,teams.image, events.start_time ,events.event_id,events.end_time,frequency.end_date
 FROM teams
 INNER JOIN events
 ON  teams.group_id=events.group_id 
 INNER JOIN frequency 
-ON events.frequency_id=frequency.frequency_id   ORDER BY start_time asc;";
-//AND start_time Between CURDATE() AND date_add(date_add(curdate(), interval  -WEEKDAY(curdate())-2 day), interval 7 day)
+ON events.frequency_id=frequency.frequency_id AND start_time Between CURDATE() AND date_add(date_add(curdate(), interval  -WEEKDAY(curdate())-2 day), interval 7 day)  ORDER BY start_time asc;";
+//
 $result = $conn->query($sql);
+
+
+/* Result */
+
 
 if ($result->num_rows > 0) {
     // output data of each row
@@ -35,10 +39,11 @@ if ($result->num_rows > 0) {
                     <div class="text-center text-2xl ">
                         <?php echo $row["name"];?>
                     </div>
-                    <div class="text-m text-center p-1">
+                    <div class="text-m text-center  p-1">
                         Scrumteam : <?php echo $row["TeamName"] ?><br>
-                        Datum : <?php echo $row["start_time"] ?><br>
+                        Datum : <?php echo $row["start_time"];?><br>
                         Herhaling : <?php echo $row["type"] ?>
+
                     </div>
                 </div>
             </div>
