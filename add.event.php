@@ -28,6 +28,12 @@ $sql = "Insert into frequency(type,end_date) values('Dagelijks','$_POST[endDate]
         $sql .= "insert into events (name,start_time,end_time,group_id,frequency_id) values('$_POST[name]','$startDate','$_POST[endTime]','$_POST[teams]',(SELECT frequency_id FROM frequency ORDER BY frequency_id DESC LIMIT 1));";
         $startDate = date('Y-m-d H:i:s', strtotime($startDate . ' +1 day'));
     }
+//    if ($endDate < $startDate){
+//        echo 'Wtf man! you arrogant piece of shit asking me to do everything. Why dont you do it on your own!';
+//        header("location:dashboard.php");
+//        die();
+//
+//    }
     if ($conn -> multi_query($sql)) {
         do {
             // Store first result set
@@ -54,6 +60,7 @@ elseif ($frequency=='Wekelijks'){
         $sql .= "insert into events (name,start_time,end_time,group_id,frequency_id) values('$_POST[name]','$startDate','$_POST[endTime]','$_POST[teams]',(SELECT frequency_id FROM frequency ORDER BY frequency_id DESC LIMIT 1));";
         $startDate = date('Y-m-d H:i:s', strtotime($startDate . ' +1 week'));
     }
+
     if ($conn -> multi_query($sql)) {
         do {
             // Store first result set
